@@ -17,3 +17,19 @@ option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/example
 // An Example is a mostly-normalized data format for storing data for
 // training and inference.  It contains a key-value store (features); where
 // each key (string) maps to a Feature message (which is oneof packed BytesList,
+// FloatList, or Int64List).  This flexible and compact format allows the
+// storage of large amounts of typed data, but requires that the data shape
+// and use be determined by the configuration files and parsers that are used to
+// read and write this format.  That is, the Example is mostly *not* a
+// self-describing format.  In TensorFlow, Examples are read in row-major
+// format, so any configuration that describes data with rank-2 or above
+// should keep this in mind.  For example, to store an M x N matrix of Bytes,
+// the BytesList must contain M*N bytes, with M rows of N contiguous values
+// each.  That is, the BytesList value must store the matrix as:
+//     .... row 0 .... .... row 1 .... // ...........  // ... row M-1 ....
+//
+// An Example for a movie recommendation application:
+//   features {
+//     feature {
+//       key: "age"
+//       value { float_list {
