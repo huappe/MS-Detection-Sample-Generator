@@ -33,3 +33,20 @@ option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/example
 //     feature {
 //       key: "age"
 //       value { float_list {
+//         value: 29.0
+//       }}
+//     }
+//     feature {
+//       key: "movie"
+//       value { bytes_list {
+//         value: "The Shawshank Redemption"
+//         value: "Fight Club"
+//       }}
+//     }
+//     feature {
+//       key: "movie_ratings"
+//       value { float_list {
+//         value: 9.0
+//         value: 9.7
+//       }}
+//     }
