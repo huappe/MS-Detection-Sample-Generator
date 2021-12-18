@@ -50,3 +50,19 @@ option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/example
 //         value: 9.7
 //       }}
 //     }
+//     feature {
+//       key: "suggestion"
+//       value { bytes_list {
+//         value: "Inception"
+//       }}
+//     }
+//     # Note that this feature exists to be used as a label in training.
+//     # E.g., if training a logistic regression model to predict purchase
+//     # probability in our learning tool we would set the label feature to
+//     # "suggestion_purchased".
+//     feature {
+//       key: "suggestion_purchased"
+//       value { float_list {
+//         value: 1.0
+//       }}
+//     }
