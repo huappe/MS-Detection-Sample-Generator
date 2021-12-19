@@ -66,3 +66,18 @@ option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/example
 //         value: 1.0
 //       }}
 //     }
+//     # Similar to "suggestion_purchased" above this feature exists to be used
+//     # as a label in training.
+//     # E.g., if training a linear regression model to predict purchase
+//     # price in our learning tool we would set the label feature to
+//     # "purchase_price".
+//     feature {
+//       key: "purchase_price"
+//       value { float_list {
+//         value: 9.99
+//       }}
+//     }
+//  }
+//
+// A conformant Example data set obeys the following conventions:
+//   - If a Feature K exists in one example with data type T, it must be of
