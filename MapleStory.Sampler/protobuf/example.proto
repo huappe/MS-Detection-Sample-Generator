@@ -81,3 +81,17 @@ option go_package = "github.com/tensorflow/tensorflow/tensorflow/go/core/example
 //
 // A conformant Example data set obeys the following conventions:
 //   - If a Feature K exists in one example with data type T, it must be of
+//       type T in all other examples when present. It may be omitted.
+//   - The number of instances of Feature K list data may vary across examples,
+//       depending on the requirements of the model.
+//   - If a Feature K doesn't exist in an example, a K-specific default will be
+//       used, if configured.
+//   - If a Feature K exists in an example but contains no items, the intent
+//       is considered to be an empty tensor and no default will be used.
+
+message Example {
+  Features features = 1;
+}
+
+// A SequenceExample is an Example representing one or more sequences, and
+// some context.  The context contains features which apply to the entire
