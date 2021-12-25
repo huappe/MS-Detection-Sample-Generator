@@ -95,3 +95,16 @@ message Example {
 
 // A SequenceExample is an Example representing one or more sequences, and
 // some context.  The context contains features which apply to the entire
+// example. The feature_lists contain a key, value map where each key is
+// associated with a repeated set of Features (a FeatureList).
+// A FeatureList thus represents the values of a feature identified by its key
+// over time / frames.
+//
+// Below is a SequenceExample for a movie recommendation application recording a
+// sequence of ratings by a user. The time-independent features ("locale",
+// "age", "favorites") describing the user are part of the context. The sequence
+// of movies the user rated are part of the feature_lists. For each movie in the
+// sequence we have information on its name and actors and the user's rating.
+// This information is recorded in three separate feature_list(s).
+// In the example below there are only two movies. All three feature_list(s),
+// namely "movie_ratings", "movie_names", and "actors" have a feature value for
