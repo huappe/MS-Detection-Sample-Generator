@@ -108,3 +108,18 @@ message Example {
 // This information is recorded in three separate feature_list(s).
 // In the example below there are only two movies. All three feature_list(s),
 // namely "movie_ratings", "movie_names", and "actors" have a feature value for
+// both movies. Note, that "actors" is itself a bytes_list with multiple
+// strings per movie.
+//
+// context: {
+//   feature: {
+//     key  : "locale"
+//     value: {
+//       bytes_list: {
+//         value: [ "pt_BR" ]
+//       }
+//     }
+//   }
+//   feature: {
+//     key  : "age"
+//     value: {
