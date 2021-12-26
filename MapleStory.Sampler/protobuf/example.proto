@@ -139,3 +139,16 @@ message Example {
 // }
 // feature_lists: {
 //   feature_list: {
+//     key  : "movie_ratings"
+//     value: {
+//       feature: {
+//         float_list: {
+//           value: [ 4.5 ]
+//         }
+//       }
+//       feature: {
+//         float_list: {
+//           value: [ 5.0 ]
+//         }
+//       }
+//     }
