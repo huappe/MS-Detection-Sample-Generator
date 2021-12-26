@@ -123,3 +123,19 @@ message Example {
 //   feature: {
 //     key  : "age"
 //     value: {
+//       float_list: {
+//         value: [ 19.0 ]
+//       }
+//     }
+//   }
+//   feature: {
+//     key  : "favorites"
+//     value: {
+//       bytes_list: {
+//         value: [ "Majesty Rose", "Savannah Outen", "One Direction" ]
+//       }
+//     }
+//   }
+// }
+// feature_lists: {
+//   feature_list: {
