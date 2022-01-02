@@ -172,3 +172,18 @@ message Example {
 //     key  : "actors"
 //     value: {
 //       feature: {
+//         bytes_list: {
+//           value: [ "Tim Robbins", "Morgan Freeman" ]
+//         }
+//       }
+//       feature: {
+//         bytes_list: {
+//           value: [ "Brad Pitt", "Edward Norton", "Helena Bonham Carter" ]
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// A conformant SequenceExample data set obeys the following conventions:
+//
