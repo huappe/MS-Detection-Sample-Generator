@@ -215,3 +215,12 @@ message Example {
 // Conformant FeatureLists:
 //    feature_lists: { feature_list: {
 //      key: "movie_ratings"
+//      value: { feature: { float_list: { value: [ 4.5 ] } }
+//               feature: { float_list: { value: [ 5.0 ] } } }
+//    } }
+//
+// Non-conformant FeatureLists (mismatched types):
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
+//      value: { feature: { float_list: { value: [ 4.5 ] } }
+//               feature: { int64_list: { value: [ 5 ] } } }
