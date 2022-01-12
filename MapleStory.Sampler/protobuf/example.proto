@@ -224,3 +224,16 @@ message Example {
 //      key: "movie_ratings"
 //      value: { feature: { float_list: { value: [ 4.5 ] } }
 //               feature: { int64_list: { value: [ 5 ] } } }
+//    } }
+//
+// Conditionally conformant FeatureLists, the parser configuration determines
+// if the feature sizes must match:
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
+//      value: { feature: { float_list: { value: [ 4.5 ] } }
+//               feature: { float_list: { value: [ 5.0, 6.0 ] } } }
+//    } }
+//
+// Conformant pair of SequenceExample
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
