@@ -256,3 +256,19 @@ message Example {
 //    } }
 // and:
 //    feature_lists: { feature_list: {
+//      key: "movie_ratings"
+//      value: { }
+//    } }
+//
+// Conditionally conformant pair of SequenceExample, the parser configuration
+// determines if the second feature_lists is consistent (zero-length) or
+// invalid (missing "movie_ratings"):
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
+//      value: { feature: { float_list: { value: [ 4.5 ] } }
+//               feature: { float_list: { value: [ 5.0 ] } } }
+//    } }
+// and:
+//    feature_lists: { }
+//
+// Non-conformant pair of SequenceExample (mismatched types)
