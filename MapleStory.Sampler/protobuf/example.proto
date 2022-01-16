@@ -272,3 +272,20 @@ message Example {
 //    feature_lists: { }
 //
 // Non-conformant pair of SequenceExample (mismatched types)
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
+//      value: { feature: { float_list: { value: [ 4.5 ] } }
+//               feature: { float_list: { value: [ 5.0 ] } } }
+//    } }
+// and:
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
+//      value: { feature: { int64_list: { value: [ 4 ] } }
+//               feature: { int64_list: { value: [ 5 ] } }
+//               feature: { int64_list: { value: [ 2 ] } } }
+//    } }
+//
+// Conditionally conformant pair of SequenceExample; the parser configuration
+// determines if the feature sizes must match:
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
