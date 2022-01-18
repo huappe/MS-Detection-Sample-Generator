@@ -289,3 +289,12 @@ message Example {
 // determines if the feature sizes must match:
 //    feature_lists: { feature_list: {
 //      key: "movie_ratings"
+//      value: { feature: { float_list: { value: [ 4.5 ] } }
+//               feature: { float_list: { value: [ 5.0 ] } } }
+//    } }
+// and:
+//    feature_lists: { feature_list: {
+//      key: "movie_ratings"
+//      value: { feature: { float_list: { value: [ 4.0 ] } }
+//               feature: { float_list: { value: [ 5.0, 3.0 ] } }
+//    } }
