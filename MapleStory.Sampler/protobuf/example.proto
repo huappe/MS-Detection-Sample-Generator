@@ -298,3 +298,10 @@ message Example {
 //      value: { feature: { float_list: { value: [ 4.0 ] } }
 //               feature: { float_list: { value: [ 5.0, 3.0 ] } }
 //    } }
+
+message SequenceExample {
+  Features context = 1;
+  FeatureLists feature_lists = 2;
+}
+// LINT.ThenChange(
+//     https://www.tensorflow.org/code/tensorflow/python/training/training.py)

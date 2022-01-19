@@ -1,0 +1,13 @@
+
+// Protocol messages for describing features for machine learning model
+// training or inference.
+//
+// There are three base Feature types:
+//   - bytes
+//   - float
+//   - int64
+//
+// A Feature contains Lists which may hold zero or more values.  These
+// lists are the base values BytesList, FloatList, Int64List.
+//
+// Features are organized into categories by name.  The Features message
