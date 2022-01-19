@@ -27,3 +27,15 @@
 //       value: "Fight Club"
 //     }}
 //   }
+//   feature {
+//     key: "movie_ratings"
+//     value { float_list {
+//       value: 9.0
+//       value: 9.7
+//     }}
+//   }
+//   feature {
+//     key: "suggestion"
+//     value { bytes_list {
+//       value: "Inception"
+//     }}
