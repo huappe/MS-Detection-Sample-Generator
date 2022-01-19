@@ -11,3 +11,19 @@
 // lists are the base values BytesList, FloatList, Int64List.
 //
 // Features are organized into categories by name.  The Features message
+// contains the mapping from name to Feature.
+//
+// Example Features for a movie recommendation application:
+//   feature {
+//     key: "age"
+//     value { float_list {
+//       value: 29.0
+//     }}
+//   }
+//   feature {
+//     key: "movie"
+//     value { bytes_list {
+//       value: "The Shawshank Redemption"
+//       value: "Fight Club"
+//     }}
+//   }
