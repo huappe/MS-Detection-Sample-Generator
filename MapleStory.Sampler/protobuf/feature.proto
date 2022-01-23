@@ -90,3 +90,10 @@ message Features {
   // Map from feature name to feature.
   map<string, Feature> feature = 1;
 }
+
+// Containers for sequential data.
+//
+// A FeatureList contains lists of Features.  These may hold zero or more
+// Feature values.
+//
+// FeatureLists are organized into categories by name.  The FeatureLists message
