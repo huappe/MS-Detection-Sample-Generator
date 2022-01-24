@@ -97,3 +97,15 @@ message Features {
 // Feature values.
 //
 // FeatureLists are organized into categories by name.  The FeatureLists message
+// contains the mapping from name to FeatureList.
+//
+message FeatureList {
+  repeated Feature feature = 1;
+}
+
+message FeatureLists {
+  // Map from feature name to feature list.
+  map<string, FeatureList> feature_list = 1;
+}
+// LINT.ThenChange(
+//     https://www.tensorflow.org/code/tensorflow/python/training/training.py)
