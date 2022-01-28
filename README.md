@@ -1,1 +1,1 @@
-# MS-Detection-Sample-Generator \nAn Open Source Project to Generate Machine Lea
+# MS-Detection-Sample-Generator \nAn Open Source Project to Generate Machine Learning Sample
