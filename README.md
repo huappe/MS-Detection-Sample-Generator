@@ -1,1 +1,1 @@
-# MS-Detection-Sample-Generator \nAn Open Source Project to Generate Machine Learning Samples for Object Detection in MapleStory\n![alt text](https://github.com/huappe/MS-Detection
+# MS-Detection-Sample-Generator \nAn Open Source Project to Generate Machine Learning Samples for Object Detection in MapleStory\n![alt text](https://github.com/huappe/MS-Detection-Sample-Generato
